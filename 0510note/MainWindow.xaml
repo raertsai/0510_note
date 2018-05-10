@@ -1,0 +1,30 @@
+﻿<Window x:Class="_0510note.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_0510note"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!--right workarea-->
+            <Rectangle Fill="Beige"></Rectangle>
+        <Rectangle Grid.Column="1" Fill="GreenYellow"></Rectangle>
+        
+        <StackPanel Grid.Column="1" Margin="20">
+            <Button x:Name="open_button" Margin="0,0,0,15" Click="open_button_Click">open</Button>
+            <Button x:Name="save_button" Click="save_button_Click">save</Button>
+        </StackPanel>
+
+        <!--left workaria-->
+        <TextBox x:Name="Textarea" Margin="20,20,20,20" AcceptsReturn="True" TextWrapping="Wrap"></TextBox>
+        <!--add scroll-->
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <TextBox AcceptsReturn="True" TextWrapping="Wrap"></TextBox>
+        </ScrollViewer>
+    </Grid>
+</Window>

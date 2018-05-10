@@ -1,0 +1,14 @@
+C:\Users\USER\Desktop\0510note\0510note\bin\Debug\0510note.exe.config
+C:\Users\USER\Desktop\0510note\0510note\bin\Debug\0510note.exe
+C:\Users\USER\Desktop\0510note\0510note\bin\Debug\0510note.pdb
+C:\Users\USER\Desktop\0510note\0510note\obj\Debug\0510note.csprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\0510note\0510note\obj\Debug\MainWindow.g.cs
+C:\Users\USER\Desktop\0510note\0510note\obj\Debug\App.g.cs
+C:\Users\USER\Desktop\0510note\0510note\obj\Debug\0510note_MarkupCompile.cache
+C:\Users\USER\Desktop\0510note\0510note\obj\Debug\0510note_MarkupCompile.lref
+C:\Users\USER\Desktop\0510note\0510note\obj\Debug\MainWindow.baml
+C:\Users\USER\Desktop\0510note\0510note\obj\Debug\0510note.g.resources
+C:\Users\USER\Desktop\0510note\0510note\obj\Debug\_0510note.Properties.Resources.resources
+C:\Users\USER\Desktop\0510note\0510note\obj\Debug\0510note.csproj.GenerateResource.Cache
+C:\Users\USER\Desktop\0510note\0510note\obj\Debug\0510note.exe
+C:\Users\USER\Desktop\0510note\0510note\obj\Debug\0510note.pdb
