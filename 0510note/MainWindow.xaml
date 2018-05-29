@@ -13,14 +13,49 @@
         </Grid.ColumnDefinitions>
         <!--right workarea-->
             <Rectangle Fill="Beige"></Rectangle>
-        <Rectangle Grid.Column="1" Fill="GreenYellow"></Rectangle>
+        <Rectangle Grid.Column="1" Fill="Black"></Rectangle>
+
+        <!--set change fontsize buttons-->
+        <StackPanel>
+            <Button x:Name="small_a" Height="30" Width="30" Margin="420,180,-40,0" Background="Black" Foreground="White" FontSize="20" BorderBrush="Black" Content="a" Click="small_a_click"></Button>
+        </StackPanel>           
+        <StackPanel>
+            <Button x:Name="medium_a" Height="35" Width="30" Margin="450,170,-60,0" Background="Black" Foreground="White" FontSize="30" BorderBrush="Black" Content="a" Click="medium_a_click"></Button>
+        </StackPanel>
+        <StackPanel>
+            <Button x:Name="big_a" Height="45" Width="30" Margin="470,160,-100,0" Background="Black" Foreground="White" FontSize="40" BorderBrush="Black" Content="a" Click="big_a_click"></Button>
+        </StackPanel>
         
-        <StackPanel Grid.Column="1" Margin="20">
-            <Button x:Name="open_button" Margin="0,0,0,15" Click="open_button_Click">open</Button>
-            <Button x:Name="save_button" Click="save_button_Click">save</Button>
+        <!--set black and white mode-->
+        <StackPanel>
+            <Button x:Name="white_btn"  Click="white_click">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Ellipse Width="25" Height="25" Fill="White" Stroke="DarkGray" StrokeThickness="3" Margin="440,220,-60,0"></Ellipse>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+        
+        <StackPanel>
+            <Button x:Name="black_btn"  Click="black_click">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Ellipse Width="25" Height="25" Fill="Gray" Stroke="DarkGray" StrokeThickness="3" Margin="460,220,-100,0"></Ellipse>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
         </StackPanel>
 
-        <!--left workaria-->
+        <!--set button commands-->
+        <StackPanel Grid.Column="1" Margin="5,-120,0,0" Height="150">
+            <Button x:Name="open_button" Margin="0,0,0,15" Click="open_button_Click" Background="Black" Foreground="White" BorderBrush="Black">open</Button>
+            <Button x:Name="save_button" Click="save_button_Click" Background="Black" Foreground="White" BorderBrush="Black">save</Button>
+            <Button x:Name="new_button" Margin="10  20 10 10"  Background="Black" Foreground="White" BorderBrush="Black">New</Button>
+            <Button x:Name="save_as_button" Margin="10,10,0,10" Background="Black" Foreground="White"  BorderBrush="Black">SaveAs</Button>
+        </StackPanel>
+
+        <!--left workarea-->
         <TextBox x:Name="Textarea" Margin="20,20,20,20" AcceptsReturn="True" TextWrapping="Wrap"></TextBox>
         <!--add scroll-->
         <ScrollViewer VerticalScrollBarVisibility="Auto">
