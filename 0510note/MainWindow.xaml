@@ -51,15 +51,15 @@
         <StackPanel Grid.Column="1" Margin="5,-120,0,0" Height="150">
             <Button x:Name="open_button" Margin="0,0,0,15" Click="open_button_Click" Background="Black" Foreground="White" BorderBrush="Black">open</Button>
             <Button x:Name="save_button" Click="save_button_Click" Background="Black" Foreground="White" BorderBrush="Black">save</Button>
-            <Button x:Name="new_button" Margin="10  20 10 10"  Background="Black" Foreground="White" BorderBrush="Black">New</Button>
-            <Button x:Name="save_as_button" Margin="10,10,0,10" Background="Black" Foreground="White"  BorderBrush="Black">SaveAs</Button>
+            <Button x:Name="new_button" Click="new_button_Click" Margin="10  20 10 10"  Background="Black" Foreground="White" BorderBrush="Black">New</Button>
+            <Button x:Name="save_as_button" Click="save_as_button_Click" Margin="10,10,0,10" Background="Black" Foreground="White"  BorderBrush="Black">SaveAs</Button>
         </StackPanel>
 
         <!--left workarea-->
-        <TextBox x:Name="Textarea" Margin="20,20,20,20" AcceptsReturn="True" TextWrapping="Wrap"></TextBox>
+        <TextBox Margin="20,20,20,20" AcceptsReturn="True" TextWrapping="Wrap"></TextBox>
         <!--add scroll-->
         <ScrollViewer VerticalScrollBarVisibility="Auto">
-            <TextBox AcceptsReturn="True" TextWrapping="Wrap"></TextBox>
+            <TextBox x:Name="Textarea" AcceptsReturn="True" TextWrapping="Wrap"></TextBox>
         </ScrollViewer>
     </Grid>
 </Window>

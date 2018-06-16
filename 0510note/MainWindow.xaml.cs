@@ -20,6 +20,8 @@ namespace _0510note
     /// </summary>
     public partial class MainWindow : Window
     {
+        string filePath = "";
+
         public MainWindow()
         {
             InitializeComponent();
@@ -56,13 +58,28 @@ namespace _0510note
                 Textarea.Text = System.IO.File.ReadAllText(@"C:\Users\USER\Desktop\temp.txt");
             }
         }
-
-               private void Save_as_button_Click(object sender, RoutedEventArgs e)
+            // 按下save as後的反應
+        private void save_as_button_Click(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.SaveFileDialog dig = new Microsoft.Win32.SaveFileDialog();
 
-            // 顯示儲存視窗
+            // open save window
             Nullable<bool> result = dig.ShowDialog();
+
+            if (result == true)
+            {
+                filePath = dig.FileName;
+                System.IO.File.WriteAllText(dig.FileName, Textarea.Text);
+            }
+        }
+
+        private void new_button_Click(object sender, RoutedEventArgs e)
+        {
+            // 重置資料
+
+            filePath = " ";
+            Textarea.Text = " ";
+
         }
 
         // 讓字體變小
@@ -81,26 +98,17 @@ namespace _0510note
             Textarea.FontSize = 25;
         }
 
-        // 讓畫面反白
         private void white_click(object sender, RoutedEventArgs e)
         {
             Textarea.Background = Brushes.White;
-            Textarea.Foreground = Brushes.Gray;
-            small_a.Background = Brushes.White;
-            medium_a.Foreground = Brushes.Gray;
-            big_a.BorderBrush = Brushes.White;
+            Textarea.Foreground = Brushes.Black;
         }
 
-        // 讓畫面反黑
         private void black_click(object sender, RoutedEventArgs e)
         {
             Textarea.Background = Brushes.Gray;
             Textarea.Foreground = Brushes.White;
-            small_a.Background = Brushes.Gray;
-            medium_a.Foreground = Brushes.White;
-            big_a.BorderBrush = Brushes.Gray;
         }
-
 
     }
 }
